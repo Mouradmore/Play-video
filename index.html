@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+  <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+#spinner_container {
+  width: 100vh;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3d3b46;
+  opacity: 0.5;
+  z-index: 2000;
+  display: none !important;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#spinner_container #spinner {
+  overflow: hidden;
+  position: fixed;
+  transform: translate(-50%, 60%);
+  margin-left: 50%;
+  margin-right: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+@media only screen and (min-width: 768px) {
+  #spinner_container #spinner {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+#spinner_container #spinner .section {
+  position: absolute;
+  width: 98%;
+  height: 10%;
+  border-radius: 50%;
+  border-width: 0.25rem;
+  border-style: solid;
+  border-color: transparent;
+  mix-blend-mode: overlay;
+  -webkit-animation: animateprogress var(--duration) ease-in-out infinite;
+          animation: animateprogress var(--duration) ease-in-out infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  pointer-events: none;
+}
+#spinner_container #spinner .red {
+  border-left-color: rgb(37, 3, 3);
+  --duration: 2.5s;
+}
+#spinner_container #spinner .green {
+  border-right-color: rgb(108, 173, 10);
+  --duration: 1s;
+}
+#spinner_container #spinner .blue {
+  border-top-color: rgb(8, 8, 70);
+  --duration: 1.5s;
+}
+@-webkit-keyframes animateprogress {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animateprogress {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#selected_video {
+  padding: 0.75rem;
+}
+@media only screen and (min-width: 768px) {
+  #selected_video {
+    width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#selected_video .volume {
+  display: flex !important;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  margin: 2rem 0 0 1rem;
+  padding: 1rem 0.45rem;
+  border-radius: 2rem;
+  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.05);
+  background-color: rgba(89, 88, 97, 0.6);
+  z-index: 2000;
+}
+@media (max-width: 599px) {
+  #selected_video .volume {
+    display: none !important;
+  }
+}
+#selected_video .volume button {
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 50%;
+  outline: none;
+  background-color: transparent;
+  color: #d0eaf9;
+  text-align: center;
+  text-transform: lowercase;
+  transition: all ease-in-out 0.25s;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+  #selected_video .volume button:hover {
+    background-color: rgba(61, 59, 70, 0.6);
+  }
+}
+#selected_video .volume .loop .loop_video,
+#selected_video .volume .loop .loop_false {
+  display: none;
+}
+#selected_video .volume .mute_video .mute,
+#selected_video .volume .mute_video .unmute {
+  display: none !important;
+}
+.ere{
+  width: 99%;
+  height: 23rem;
+  display: flex;
+  background: #3d3b46;
+  padding: 0;
+  position: fixed;
+  right: -1px;
+  top: -40px;
+}
+ #video_player {
+  width: 99%;
+  height: 20rem;
+  min-height: 15rem;
+  border-radius: 0.2rem;
+}
+@media only screen and (min-width: 768px) {
+  #selected_video #video_player {
+    border-radius: 0.85rem;
+    min-height: 22rem;
+  }
+}
+#selected_video .player_poster {
+  position: absolute;
+  transform: translateX(1rem);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (max-width: 599px) {
+  #selected_video .player_poster {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #selected_video .player_poster {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  #selected_video .player_poster {
+    display: none;
+  }
+}
+
+#selected_video .controls {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#selected_video .controls .playback {
+  margin-bottom: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  #selected_video .controls .playback {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+#selected_video .controls .playback button {
+  margin-top: 300px;
+  padding: 0.5rem;
+  border: 1px solid #595861;
+  border-radius: 2rem;
+  outline: none;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 6px 24px rgba(0, 0, 0, 0.05);
+  background-color: transparent;
+  color: #d0eaf9;
+  text-align: center;
+  text-transform: lowercase;
+  transition: all ease-in-out 0.25s;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+  #selected_video .controls .playback button:hover {
+    background-color: #595861;
+  }
+}
+#selected_video .controls .playback .play-pause {
+  display: flex !important;
+  position: fixed;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  align-items: center;
+  top: -40px;
+  left: -3px;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  #selected_video .controls .playback .play-pause {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+#selected_video .controls .playback .play-pause .mini {
+  border: 0;
+  border-radius: 50%;
+  box-shadow: none;
+  justify-content: center;
+}
+@media only screen and (min-width: 1024px) {
+  #selected_video .controls .playback .play-pause .mini:hover {
+    background-color: rgba(89, 88, 97, 0.6);
+  }
+}
+#selected_video .controls .playback .play-pause .mini span {
+  padding: 0.25rem;
+  font-size: 1.5rem;
+}
+#selected_video .controls .playback .play-pause #play_pause {
+  border-radius: 50%;
+}
+@media only screen and (min-width: 768px) {
+  #selected_video .controls .playback .play-pause #play_pause .play,
+#selected_video .controls .playback .play-pause #play_pause .pause {
+    font-size: 1.85rem;
+  }
+}
+#selected_video .controls .playback .play-pause #play_pause .pause {
+  display: none;
+}
+#selected_video .controls .playback ._rates {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  #selected_video .controls .playback ._rates {
+    display: block;
+  }
+}
+#selected_video .controls .playback ._rates button {
+  border: 0;
+  box-shadow: none;
+  background-color: #595861;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+}
+#selected_video .controls #times {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  margin-bottom: 0.5rem;
+}
+#selected_video .controls #times p {
+  margin: unset;
+}
+#selected_video .controls .seek_progress {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: none;
+  gap: 0;
+}
+#selected_video .controls .seek_progress #video_progress {
+  background-color: #14c2fa;
+  width: 0;
+  height: 0.25rem;
+  border-radius: 0.85rem 0 0 0.85rem;
+}
+#selected_video .controls .seek_progress #seek {
+  display: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #14c2fa;
+}
+
+#other_videos {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+#other_videos #video_poster {
+  display: flex !important;
+  flex-direction: column-reverse;
+  flex-wrap: no-wrap;
+  align-items: unset;
+  justify-content: unset;
+  gap: 0;
+  margin: 20px;
+  width: 50rem;
+  height: 12rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.2rem;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 6px 24px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  #other_videos #video_poster {
+    width: 14rem;
+    height: 12rem;
+  }
+}
+#other_videos #video_poster .content {
+  display: flex !important;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  align-items: ceter;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(61, 59, 70, 0.6);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+#other_videos #video_poster .content p {
+  margin: unset;
+  text-align: center;
+  color: #d0eaf9;
+}
+
+#key-map {
+  width: 20rem;
+  border: 0;
+  border-radius: 0.75rem;
+  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.05);
+  background-color: #f45434;
+}
+#key-map::-webkit-backdrop {
+  background-color: rgba(61, 59, 70, 0.6);
+}
+#key-map::backdrop {
+  background-color: rgba(61, 59, 70, 0.6);
+}
+#key-map .key_map {
+  margin: unset;
+  text-align: center;
+  font-weight: 600;
+  color: #d0eaf9;
+}
+#key-map .keys > p {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  color: #d0eaf9;
+}
+#key-map .keys > p :nth-child(1) {
+  font-weight: bolder;
+}
+
+*,
+*::before,
+**::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  touch-action: manipulation;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #3d3b46;
+  color: #d0eaf9;
+  font-family: "Open Sans", sans-serif;
+}
+body #copy {
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+body #copy a {
+  color: #14c2fa;
+}
+
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  background-color: rgba(89, 88, 97, 0.6);
+}/*# sourceMappingURL=styles.css.map */
+
+    </style>
+
+    
+  </head>
+  <body oncontextmenu="return false">
+
+    <div id="spinner_container">
+      <div id="spinner">
+        <div class="section red"></div>
+        <div class="section green"></div>
+        <div class="section blue"></div>
+      </div>
+    </div>
+    <section id="selected_video">
+      <div class="volume">
+        <button class="loop">
+          <span class="material-icons-outlined loop_video"> repeat </span>
+          <span class="material-icons-outlined loop_false"> repeat_on </span>
+        </button>
+<button class="mute_video">
+<span class="material-icons-outlined mute"> volume_up </span>
+<span class="material-icons-outlined unmute"> volume_off </span>
+        </button>
+<button class="shuffle">
+<span class="material-icons-outlined" id="shuffle"> shuffle </span>
+<span class="material-icons-outlined" style="display: flex" id="shuffle_on">shuffle_on</span>
+</button></div>
+<p class="ere">
+<video class="header" id="video_player"></video>
+</p>
+<img class="player_poster" />
+<div class="controls">
+<div class="playback">
+<div class="play-pause">
+<button class="mini" id="forward30">
+<span class="material-icons-outlined"> forward_30 </span>
+</button>
+<button class="mini" id="skip_previous">
+              <span class="material-icons-outlined"> skip_previous </span>
+            </button>
+            <button id="play_pause">
+              <span class="material-icons-outlined play"> play_arrow </span>
+              <span class="material-icons-outlined pause"> pause </span>
+            </button>
+            <button class="mini" id="skip_next">
+              <span class="material-icons-outlined"> skip_next </span>
+            </button>
+            <button class="mini" id="replay30">
+              <span class="material-icons-outlined"> replay_30 </span>
+            </button>
+          </div>
+
+          <div class="_rates">
+            <button id="pr05">0.5X</button>
+            <button id="pr1">1X</button>
+            <button id="pr2">2X</button>
+          </div>
+        </div>
+
+        <div id="times">
+          <p id="curr_time"></p>
+          <p id="total_time"></p>
+        </div>
+
+        <div class="seek_progress">
+          <div id="video_progress"></div>
+          <span id="seek"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="other_videos"></section>
+<br></br>
+<br></br>
+<br></br>
+    <p style="text-align: center; height:40px;">Click or drag & drop a video to the player</p>
+
+    <p id="copy">
+      &copy; &nbsp;<span id="year"></span> &nbsp;
+      <b href="">InTexT English</b>
+    </p>
+<br></br>
+    <dialog id="key-map">
+      <p class="key_map">Key Map</p>
+
+      <div class="keys">
+        <p>
+          <span>L</span>
+          <span> Loop current Video </span>
+        </p>
+
+        <p>
+          <span>M</span>
+          <span> Mute </span>
+        </p>
+
+        <p>
+          <span>N</span>
+          <span> Play Next </span>
+        </p>
+
+        <p>
+          <span>O</span>
+          <span> Remove Loop </span>
+        </p>
+
+        <p>
+          <span>P</span>
+          <span> Play Previous </span>
+        </p>
+
+        <p>
+          <span>R</span>
+          <span> Refresh Page </span>
+        </p>
+
+        <p>
+          <span>U</span>
+          <span> Unmute </span>
+        </p>
+
+        <p>
+          <span class="material-icons-outlined"> chevron_right </span>
+          <span> Skip 30 seconds </span>
+        </p>
+
+        <p>
+          <span class="material-icons-outlined"> chevron_left </span>
+          <span> Replay 30 seconds </span>
+        </p>
+
+        <p>
+          <span>.</span>
+          <span> Pause </span>
+        </p>
+
+        <p>
+          <span>,</span>
+          <span> Play </span>
+        </p>
+
+        <p>
+          <span>Shift</span>
+          <span> Show key map </span>
+        </p>
+
+        <p>
+          <span>esc</span>
+          <span> Close Key map </span>
+        </p>
+      </div>
+    </dialog>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="controls.js"></script>
+    <script type="module" src="videos.js"></script>
+</body>
+</html>
