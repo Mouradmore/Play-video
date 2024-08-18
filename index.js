@@ -20,7 +20,7 @@ export const videoList = [
   {
     title: "اهم الجمل في اللغة الانجليزية تعلم اللغة الانجليزية من الصفر ",
     imageURL:
-      "02.jpg",
+      "111.jpg",
     videoURL:
       "01.mp4",
   },
