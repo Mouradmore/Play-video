@@ -1,4 +1,5 @@
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
     .thumb_vid_wrapper{
         width: 33.33333333333%;
@@ -58,13 +59,14 @@
     
     
     .video_title {
-        margin-top: 72%;
+        margin-top: 80%;
     }
 
     .play_video_wrapper {
         width: 95%;
-        top: 50px;
-        background: #000;
+        height: 280px;
+        top: 60px;
+        background: #3d3b46;
         position: fixed;
         padding-top: 10px;
         right: 2.5%;
@@ -142,6 +144,7 @@
     .content_when_played .thumb_vid_wrapper {
         padding: 0px;
         padding-top: 10px;
+        background: ;
     }
 
     .main_part{
