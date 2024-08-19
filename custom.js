@@ -18,8 +18,8 @@ let video_details = [
     [
     "اهم الجمل في اللغة الانجليزية تعلم اللغة الانجليزية من الصفر",
     "02",
-    "131K",
-    "3 days",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1OdX05VtfRFyAr-1pDyqgiSUIyMkVOns0/preview"
     "02.mp4"
 ],
@@ -28,8 +28,8 @@ let video_details = [
     [
     "اهم الجمل والعبارات الاساسية لتعلم اللغة الانجليزية تعلم اللغة الانجليزية من الصفر",
     "03",
-    "1.8 lakh",
-    "5 months",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1pWeQ--wEYUHdOvwhsnlrCW0RWj_hADDS/preview"
     "03.mp4"
 ],
@@ -38,8 +38,8 @@ let video_details = [
     [
     "اهم الجمل والعبارات الاساسية لتعلم اللغة الانجليزية تعلم اللغة الانجليزية من الصفر",
     "03",
-    "3.4M",
-    "1 years",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1Z2XerGXVELE_IPD-9rRhZwXlCkkYGno3/preview"
     "04.mp4"
 ],
@@ -48,8 +48,8 @@ let video_details = [
     [
     "اهم الجمل والعبارات الاساسية لتعلم اللغة الانجليزية تعلم اللغة الانجليزية من الصفر",
     "03",
-    "229K",
-    "2 years",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1bbdwLGSKpIHe_CL-HODbQy-MvgNpffHw/preview"
     "05.mp4"
 ],
@@ -58,8 +58,8 @@ let video_details = [
     [
     "تعلم اللغة الإنجليزية من الصفر  باللهجة البريطانية ",
     "04",
-    "668K",
-    "4 hours",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1VL0NPlDgRjADZs0zWrLotFouNE9z5vpn/preview"
     "06.mp4"
 ],
@@ -68,8 +68,8 @@ let video_details = [
     [
     "تعلم اللغة الإنجليزية من الصفر  باللهجة البريطانية",
     "04",
-    "39K",
-    "4 months",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1D_2402oD4lDQ8-B8SG8M_OgJ_bHYZPsS/preview"
     "07.mp4"
 ],
@@ -78,8 +78,8 @@ let video_details = [
     [
     "كيف تترجم أي جملة  ؟؟",
     "05",
-    "4M",
-    "2 years",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1YrIJfPperAtum5N3em5XnWPDcLSvaxke/preview"
     "001.mp4"
 ],
@@ -88,8 +88,8 @@ let video_details = [
     [
     "أكثر 50 صفة في اللغة الإنجليزية   صوت وصورة",
     "06",
-    "844K",
-    "2 weeks",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1Ck8Sn5zabbYj0GdmWZU4JmFxEGtNE8fl/preview"
     "002.mp4"
 ],
@@ -98,8 +98,8 @@ let video_details = [
     [
     "كورس أهم 100 سؤال وجواب في اللغة الانجليزية",
     "07",
-    "79.6K",
-    "4 months",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1o2odlDyDBm10-ZZbF6QNc5LguaFjFxSD/preview"
     "08.mp4"
 ],
@@ -108,8 +108,8 @@ let video_details = [
     [
     "كورس أهم 100 سؤال وجواب في اللغة الانجليزية",
     "07",
-    "89.6K",
-    "3 months",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1d8YWDOFrXyoUw6estGdvgztopb2AE0qt/preview"
     "09.mp4"
 ],
@@ -118,8 +118,8 @@ let video_details = [
     [
     "كورس أهم 100 سؤال وجواب في اللغة الانجليزية",
     "07",
-    "2.6M",
-    "8 months",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/18OrsRLLGUiP3FP8-H7LTrplcm3arpLnk/preview"
     "10.mp4"
 ],
@@ -128,8 +128,8 @@ let video_details = [
     [
     "تعلم اللغة الانجليزية _اهم الافعال في اللغة الانجليزية. مع الترجمة",
     "08",
-    "359K",
-    "6 months",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1FzC5_FmEGY_TfwdzxKKM2LLX_DDSvCB_/preview"
     "003.mp4"
 ],
@@ -138,8 +138,8 @@ let video_details = [
     [
     "تعلم اهم العبارات الاساسية واكثرها استخداما في الانجليزية- الدرس الاول",
     "09",
-    "173K",
-    "22 hours",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1cFMHkox0ZRKF10xVmoDiASuIJQ1yOjtI/preview"
     "004.mp4"
 ],
@@ -148,8 +148,8 @@ let video_details = [
     [
     "تعلم اللغة الإنجليزية من الصفر",
     "11",
-    "582K",
-    "9 months",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1ef9xNHsNPzrb3lhoBc5QG1fJrw4o9zQi/preview"
     "005.mp4"
 ],
@@ -158,8 +158,8 @@ let video_details = [
     [
     "اهم الجمل والعبارات الاساسية في تعلم اللغة الانجليزية من الصفر بسهولة",
     "01",
-    "3.7M",
-    "7 days",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1Z4LIiQsux5uu1Dhi3Q3ClbjXilSqOFzL/preview"
     "11.mp4"
 ],
@@ -168,8 +168,8 @@ let video_details = [
     [
     "اهم الجمل والعبارات الاساسية في تعلم اللغة الانجليزية من الصفر بسهولة",
     "12",
-    "37K",
-    "12 days",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1qdOdoHM2l133TlrIGbdxr0BuseQ8pzhn/preview"
     "12.mp4"
     ],
@@ -178,8 +178,8 @@ let video_details = [
     [
     "اهم الجمل والعبارات الاساسية في تعلم اللغة الانجليزية من الصفر بسهولة",
     "12",
-    "473K",
-    "8 months",
+    "video",
+    "2024",
     // Not Requared "https://drive.google.com/file/d/1zAvQhkHeRqZwi4O7qSUTqH1J2c3h6XNh/preview"
     "13.mp4"
     ]
