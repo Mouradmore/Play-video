@@ -17,7 +17,7 @@ let video_details = [
 
     [
     "اهم الجمل في اللغة الانجليزية تعلم اللغة الانجليزية من الصفر",
-    "02",
+    "02~2",
     "video",
     "2024",
     // Not Requared "https://drive.google.com/file/d/1OdX05VtfRFyAr-1pDyqgiSUIyMkVOns0/preview"
@@ -77,7 +77,7 @@ let video_details = [
 
     [
     "كيف تترجم أي جملة  ؟؟",
-    "05",
+    "05~2",
     "video",
     "2024",
     // Not Requared "https://drive.google.com/file/d/1YrIJfPperAtum5N3em5XnWPDcLSvaxke/preview"
